@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="data:image/jpeg;base64,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">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="8.强化学习8.强化学习.pdf 总结以下是关于”行为主义（强化学习）和Deep Reinforcement Learning（深度强化学习）”内容的总结概括： 强化学习概述 •	核心概念：强化学习是一种机器学习方法，代理（Agent）通过与环境（Environment）交互，采取行动（Action），观察状态（State）并获得奖励（Reward），目标是最大化期望的奖励。 •	基本流程：代理从">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第八章">
+<meta property="og:url" content="http://example.com/2025/06/10/%E7%AC%AC%E5%85%AB%E7%AB%A0/index.html">
+<meta property="og:site_name" content="傻逼博客">
+<meta property="og:description" content="8.强化学习8.强化学习.pdf 总结以下是关于”行为主义（强化学习）和Deep Reinforcement Learning（深度强化学习）”内容的总结概括： 强化学习概述 •	核心概念：强化学习是一种机器学习方法，代理（Agent）通过与环境（Environment）交互，采取行动（Action），观察状态（State）并获得奖励（Reward），目标是最大化期望的奖励。 •	基本流程：代理从">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-06-10T09:32:00.000Z">
+<meta property="article:modified_time" content="2025-06-10T09:42:04.603Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>第八章 - 傻逼博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>傻逼博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>目录</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="第八章"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-10 17:32" pubdate>
+          June 10, 2025 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.1k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          10 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">第八章</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="8-强化学习"><a href="#8-强化学习" class="headerlink" title="8.强化学习"></a>8.强化学习</h1><p><a href="./8.%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0.pdf">8.强化学习.pdf</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以下是关于”行为主义（强化学习）和Deep Reinforcement Learning（深度强化学习）”内容的总结概括：</p>
+<p><strong>强化学习概述</strong></p>
+<p><strong>•	核心概念</strong>：强化学习是一种机器学习方法，代理（Agent）通过与环境（Environment）交互，采取行动（Action），观察状态（State）并获得奖励（Reward），目标是最大化期望的奖励。</p>
+<p><strong>•	基本流程</strong>：代理从环境中接收观察结果，选择动作，执行后获得奖励和新的状态信息，从而不断优化策略。</p>
+<p><strong>强化学习的特点</strong></p>
+<p><strong>•	奖励延迟</strong>：某些行为的长期影响可能在短期内无法显现，例如围棋中的早期牺牲可能带来后期优势。</p>
+<p><strong>•	行为序列学习</strong>：学习的是一系列行为，而非单一行为，目标是最大化整个过程的奖励。</p>
+<p><strong>•	动态互动</strong>：代理的行为会影响后续接收到的数据，需要持续与环境互动以更新算法。</p>
+<p><strong>强化学习的应用</strong></p>
+<p><strong>•	游戏</strong>：如AlphaGo结合监督学习和强化学习，通过自我对弈提升能力。</p>
+<p><strong>•	机器人控制</strong>：如直升机、自动驾驶、机器人等领域的应用。</p>
+<p><strong>•	节能优化</strong>：谷歌使用DeepMind驱动的人工智能削减电费。</p>
+<p><strong>•	文本生成</strong>：通过强化学习生成自然语言文本。</p>
+<p><strong>深度强化学习的核心方法</strong></p>
+<p><strong>•	Policy-based Approach</strong>：直接学习策略函数（Actor），输出每个动作的概率分布。</p>
+<p><strong>•	Value-based Approach</strong>：学习价值函数（Critic），评估策略的好坏，Q学习是典型代表。</p>
+<p><strong>•	Actor-Critic 方法</strong>：结合Policy-based和Value-based的优点，同时学习策略和价值函数。</p>
+<p><strong>•	A3C（Asynchronous Advantage Actor-Critic）</strong>：解决Actor-Critic难以收敛的问题，提供异步并发框架，显著提升训练效率。</p>
+<p><strong>示例</strong></p>
+<p><strong>•	玩游戏</strong>：通过像素输入学习游戏操作，例如Space Invader中，代理通过观察屏幕像素选择移动或开火动作，并根据得分调整策略。</p>
+<p><strong>•	AlphaGo</strong>：结合Policy-based、Value-based和Model-based方法，通过大量自我对弈优化策略。</p>
+<p><strong>参考资料</strong></p>
+<p>•	教材：《Reinforcement Learning: An Introduction》</p>
+<p>•	视频课程：David Silver和John Schulman的讲义及视频资源</p>
+<p>•	开源工具：OpenAI Gym和Universe，提供丰富的模拟环境供强化学习研究。</p>
+<p>总结：强化学习通过代理与环境的交互，逐步优化策略以实现目标。深度强化学习结合神经网络，提升了复杂任务的学习能力，在游戏、机器人控制等领域展现出巨大潜力。</p>
+<h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><p><strong>行为主义（强化学习）</strong></p>
+<p><strong>主要参考资源</strong></p>
+<p>•	Textbook: Reinforcement Learning: An Introduction</p>
+<p>•	Lectures of David Silver</p>
+<p>•	Lectures of John Schulman</p>
+<p><strong>强化学习的基本方案</strong></p>
+<p>•	Agent与Environment交互</p>
+<p>◦	Observation（观察）</p>
+<p>◦	Action（动作）</p>
+<p>◦	Reward（奖励）</p>
+<p>◦	State（状态）</p>
+<p>•	目标：最大化期望的奖励</p>
+<p><strong>核心概念</strong></p>
+<p>1	机器学习 ≈ 寻找一个函数</p>
+<p>◦	Function input: Observation</p>
+<p>◦	Function output: Action &#x3D; π(Observation)</p>
+<p>◦	Actor&#x2F;Policy: 学习采取最佳行动</p>
+<p><strong>具体应用案例</strong></p>
+<p><strong>学习下围棋</strong></p>
+<p>•	环境与奖励机制</p>
+<p>◦	如果赢了，reward &#x3D; 1</p>
+<p>◦	如果输了，reward &#x3D; -1</p>
+<p>◦	大多数情况下，reward &#x3D; 0</p>
+<p>•	Alpha Go 的方法</p>
+<p>◦	监督学习 + 强化学习</p>
+<p>◦	Learning from teacher 和 Learning from experience</p>
+<p><strong>更多应用领域</strong></p>
+<p>1	直升机控制</p>
+<p>2	自动驾驶</p>
+<p>3	机器人</p>
+<p>4	谷歌DeepMind削减电费</p>
+<p>5	文本生成</p>
+<p><strong>强化学习的实际例子</strong></p>
+<p><strong>打游戏</strong></p>
+<p>•	机器学习像人类玩家一样打游戏</p>
+<p>◦	观察像素</p>
+<p>◦	自主采取适当行动</p>
+<p>•	使用环境工具</p>
+<p>◦	OpenAI Gym</p>
+<p>◦	OpenAI Universe</p>
+<p><strong>游戏示例：Space Invader</strong></p>
+<p>•	游戏流程</p>
+<p>◦	初始状态 (s1) → 行动 (a1) → 回馈 (r1) → 新状态 (s2) → 行动 (a2) → 回馈 (r2)</p>
+<p>◦	最终目标：最大化累积奖励</p>
+<p><strong>强化学习的特性</strong></p>
+<p>•	奖励延迟</p>
+<p>◦	早期行为可能在后期产生重要影响</p>
+<p>◦	机器需要理解一系列行为的整体价值</p>
+<p>•	数据动态性</p>
+<p>◦	机器通过与环境互动获取数据并更新算法</p>
+<p><strong>强化学习的核心方法</strong></p>
+<p><strong>Policy-based Approach</strong></p>
+<p>•	学习一个Actor</p>
+<p>◦	神经网络作为Actor</p>
+<p>▪	输入：机器的观察表示为向量或矩阵</p>
+<p>▪	输出：每个行动相关的神经元概率分布</p>
+<p><strong>Value-based Approach</strong></p>
+<p>•	学习一个Critic</p>
+<p>◦	Critic评估Actor的好坏</p>
+<p>◦	Q-学习方法</p>
+<p><strong>Actor-Critic 方法</strong></p>
+<p>•	结合Policy-based和Value-based</p>
+<p>◦	TD或MC方法</p>
+<p>◦	A3C框架</p>
+<p>▪	每个worker从global network复制参数</p>
+<p>▪	不同worker与环境互动</p>
+<p>▪	计算各自梯度并传回global network进行更新</p>
+<p><strong>Alpha Go 的综合方法</strong></p>
+<p>•	Policy-based + Value-based + Model-based</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>第八章</div>
+      <div>http://example.com/2025/06/10/第八章/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>June 10, 2025</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/10/%E7%AC%AC%E4%B9%9D%E7%AB%A0/" title="第九章">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">第九章</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/10/%E7%AC%AC%E4%B8%83%E7%AB%A0/" title="第七章">
+                        <span class="hidden-mobile">第七章</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

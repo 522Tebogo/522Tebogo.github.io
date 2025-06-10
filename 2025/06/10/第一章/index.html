@@ -1,0 +1,649 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="data:image/jpeg;base64,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">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="1.人工智能简介1.人工智能简介.pdf 总结人工智能简介总结 1	定义与起源 ◦	人工智能（AI）没有统一定义，但其核心是模拟和扩展人类智能。 ◦	1956年达特茅斯会议首次提出AI定义：让机器像人一样行动并具备智能。 ◦	学术观点包括： ▪	Nils J. Nilsson：AI是关于知识的学科，研究如何表示、获取和使用知识。 ▪	Patrick Winston：AI是使计算机完成过去只有人类才">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一章">
+<meta property="og:url" content="http://example.com/2025/06/10/%E7%AC%AC%E4%B8%80%E7%AB%A0/index.html">
+<meta property="og:site_name" content="傻逼博客">
+<meta property="og:description" content="1.人工智能简介1.人工智能简介.pdf 总结人工智能简介总结 1	定义与起源 ◦	人工智能（AI）没有统一定义，但其核心是模拟和扩展人类智能。 ◦	1956年达特茅斯会议首次提出AI定义：让机器像人一样行动并具备智能。 ◦	学术观点包括： ▪	Nils J. Nilsson：AI是关于知识的学科，研究如何表示、获取和使用知识。 ▪	Patrick Winston：AI是使计算机完成过去只有人类才">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-06-10T09:24:49.000Z">
+<meta property="article:modified_time" content="2025-06-10T09:29:04.635Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>第一章 - 傻逼博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>傻逼博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>目录</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="第一章"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-10 17:24" pubdate>
+          June 10, 2025 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">第一章</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="1-人工智能简介"><a href="#1-人工智能简介" class="headerlink" title="1.人工智能简介"></a>1.人工智能简介</h1><p><a href="./1.%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%AE%80%E4%BB%8B.pdf">1.人工智能简介.pdf</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>人工智能简介总结</strong></p>
+<p><strong>1	定义与起源</strong></p>
+<p>◦	人工智能（AI）没有统一定义，但其核心是模拟和扩展人类智能。</p>
+<p>◦	1956年达特茅斯会议首次提出AI定义：让机器像人一样行动并具备智能。</p>
+<p>◦	学术观点包括：</p>
+<p>▪	Nils J. Nilsson：AI是关于知识的学科，研究如何表示、获取和使用知识。</p>
+<p>▪	Patrick Winston：AI是使计算机完成过去只有人类才能完成的智能任务。</p>
+<p><strong>2	发展与应用</strong></p>
+<p>◦	经过半个世纪发展，AI已从简单的人类智能模拟转向研究智能活动规律，构建智能系统或硬件。</p>
+<p>◦	应用领域广泛，包括图像识别、语音识别、语义识别、人机对话、自动驾驶等。</p>
+<p>◦	关键技术包括语音识别、图像识别、自然语言处理、机器学习等。</p>
+<p><strong>3	三要素：数据、算力、算法</strong></p>
+<p><strong>◦	数据</strong>：海量数据为AI提供燃料，训练模型需要百万级甚至更多数据量。数据隐私化和私域化成为趋势。</p>
+<p><strong>◦	算力</strong>：AI芯片（如GPU、NPU）大幅提升运算能力，加速深度学习训练。量子计算可能带来计算能力的新突破。</p>
+<p><strong>◦	算法</strong>：深度学习突破传统浅层算法瓶颈，自动化机器学习（AutoML）、联邦学习、因果学习等成为研究热点。</p>
+<p><strong>4	未来趋势</strong></p>
+<p>◦	数据驱动：数据量以指数形式增长，推动虚拟世界扩张。</p>
+<p>◦	算法融合：多学派方法融合发展，追求可解释性AI（XAI）。</p>
+<p>◦	技术创新：无监督预训练、神经网络结构优化等方向持续演进。</p>
+<p><strong>5	资源与社区</strong></p>
+<p><strong>◦	开源框架</strong>：PyTorch、TensorFlow、scikit-learn等提供强大工具支持。</p>
+<p><strong>◦	预训练模型</strong>：GloVe、BERT、FastText等助力快速开发。</p>
+<p><strong>◦	数据集</strong>：ImageNet、CoCo、GLUE等为研究提供丰富素材。</p>
+<p><strong>◦	学术资源</strong>：国际顶级期刊（如JMLR、IEEE TPAMI）和会议（如ICML、NeurIPS）推动AI理论与实践进步。</p>
+<p><strong>6	代表性学者</strong></p>
+<p>◦	国际：Michael I. Jordan、Yann LeCun、Geoffrey Hinton等。</p>
+<p>◦	国内：张钹、周志华、李航等。</p>
+<p><strong>总结</strong>：人工智能通过数据、算力和算法的结合，不断拓展人类智能边界，其应用已渗透到多个领域，未来将更加注重可解释性、隐私保护和跨学科融合。</p>
+<h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><p>人工智能概述<br>•    2022年，ChatGPT的发布引发了AI热潮。<br>•    人工智能并未有统一定义。<br>•    达特茅斯会议（1956）首次提出人工智能定义：机器模仿人类智能。<br>•    经过半个世纪发展，AI成为研究人类智能活动规律并构建智能系统的边缘学科。<br>1.1 人工智能的定义<br>•    Nils J. Nilsson观点：人工智能是关于知识的学科。<br>•    Patrick Winston观点：人工智能研究如何使计算机完成过去只有人类才能做的智能工作。<br>•    经典定义：智能主体可以理解数据及从中学习，并利用知识实现特定目标和任务的能力。<br>1.2 人工智能的学派<br>•    主要学派：符号主义及联结主义。<br>•    不同时代、学科背景的人对智慧的理解及其实现方法不同。<br>1.3 人工智能的应用<br>•    图像识别准确度大幅提升，商业化应用场景广泛。<br>•    语音识别技术突破为人机语音交互奠定基础。<br>•    语义识别技术进步实现多轮对话，开放域聊天仍面临挑战。<br>1.4 未来趋势<br>数据量<br>•    海量数据为AI发展提供燃料。<br>•    数据集丰富性和大规模性对算法训练至关重要。<br>•    数据隐私化、私域化趋势明显。<br>运算力<br>•    AI芯片提升运算效率，加速深度神经网络训练。<br>•    GPU在处理海量数据方面具有压倒性优势。<br>•    计算能力进步受限时，量子计算提供新思路。<br>算法<br>•    深度学习突破算法瓶颈，2006年Geoffrey Hinton提出”Deep Learning”概念。<br>•    机器学习自动化(AutoML)发展，追求自动化构建和使用。<br>•    分布式隐私保护方向演进，联邦学习保护输入数据。<br>•    数据和机理融合，追求实践效果与简洁表达。<br>•    神经网络模型结构沿模块化+层次化方向发展。<br>•    多学派方法融合发展，互补算法优缺点。<br>•    基于大规模无(自)监督预训练发展，利用无标签数据。<br>•    基于因果学习方法发展，构建可解释性AI。<br>1.5 其他资源<br>网络教学信息<br>•    斯坦福课程：<a target="_blank" rel="noopener" href="http://v.163.com/special/opencourse/machinelearning.html">http://v.163.com/special/opencourse/machinelearning.html</a><br>•    CMU课程及相关视频链接<br>相关学术文章<br>•    COLT、ICML、CV、NIPS、JMLR等年度官网及期刊<br>相关学术期刊和会议<br>机器学习<br>•    学术会议：NIPS、ICML、ECML、COLT<br>•    学术期刊：《Machine Learning》、《Journal of Machine Learning Research》<br>数据挖掘<br>•    学术会议：SIGKDD、ICDM、SDM、PKDD、PAKDD<br>•    学术期刊：《Data Mining and Knowledge Discovery》、《IEEE Transactions on Knowledge and Data Engineering》<br>人工智能<br>•    学术会议：IJCAI、AAAI<br>•    学术期刊：《Artificial Intelligence》、《Journal of Artificial Intelligence Research》<br>数据库<br>•    学术会议：SIGMOD、VLDB、ICDE<br>•    其他顶级期刊如《IEEE Transactions on Pattern Analysis and Machine Intelligence》、《Neural Computation》<br>国内外研究者<br>国际代表性学者<br>•    Michael I. Jordan、Yann Lecun、Geoffrey E. Hinton等<br>国内知名学者<br>•    张钹、周志华、李航等<br>开源资源<br>开源代码<br>•    Pytorch、Tensorflow、scikit-learn等深度学习框架和工具库<br>预训练模型<br>•    Glove、FastText、ELMo、BERT等自然语言处理模型<br>数据集<br>•    ImageNet、CoCo、PASCAL VOC等计算机视觉数据集<br>•    GLUE、WikiText、SQuAD等自然语言处理数据集</p>
+<p><a target="_blank" rel="noopener" href="https://www.notion.so/1-20d925f269ce81ac84beddac2f983008?pvs=21">1.人工智能简介</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>第一章</div>
+      <div>http://example.com/2025/06/10/第一章/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>June 10, 2025</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/10/%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="第二章">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">第二章</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/10/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF%E9%83%A8%E5%88%86%E7%9F%A5%E8%AF%86%E7%82%B9/" title="前沿技术部分知识点">
+                        <span class="hidden-mobile">前沿技术部分知识点</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

@@ -19,25 +19,23 @@
   <meta name="author" content="梦之泪伤">
   <meta name="keywords" content="">
   
-    <meta name="description" content="3.神经网络优化和其他3.神经网络优化和其他.pdf 总结总结概括 1. 常用激活函数 •	Sigmoid缺点： ◦	易导致梯度消失：在靠近0和1的两端，梯度接近0，影响参数更新。 ◦	初始化权重需谨慎：若初始化权重过大，会导致神经元饱和，无法更新参数。 •	ReLU优缺点（未详细提及，但作为对比）： ◦	优点：缓解梯度消失问题。 ◦	缺点：可能造成神经元死亡。 2. 常用损失函数 •	回归问题：">
+    <meta name="description" content="4.卷积神经网络4.卷积神经网络.pdf 总结总结概括 1. 卷积神经网络（CNN）简介 卷积神经网络是一种特殊的神经网络，其核心在于使用卷积运算替代一般的矩阵乘法运算。它的主要目标是解决计算机视觉中的图像识别问题。与人类轻松识别图像不同，机器在处理视角变换、光照条件、背景干扰和物体变形等问题时面临巨大挑战。 2. 动机与传统方法的不足 •	在CNN流行之前，图像处理依赖于提取边缘、纹理、线条等特">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第三章">
-<meta property="og:url" content="http://martin666.site/2025/06/10/%E7%AC%AC%E4%B8%89%E7%AB%A0/index.html">
+<meta property="og:title" content="前沿技术第四章">
+<meta property="og:url" content="http://martin666.site/2025/06/10/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF%E7%AC%AC%E5%9B%9B%E7%AB%A0/index.html">
 <meta property="og:site_name" content="UIBO博客">
-<meta property="og:description" content="3.神经网络优化和其他3.神经网络优化和其他.pdf 总结总结概括 1. 常用激活函数 •	Sigmoid缺点： ◦	易导致梯度消失：在靠近0和1的两端，梯度接近0，影响参数更新。 ◦	初始化权重需谨慎：若初始化权重过大，会导致神经元饱和，无法更新参数。 •	ReLU优缺点（未详细提及，但作为对比）： ◦	优点：缓解梯度消失问题。 ◦	缺点：可能造成神经元死亡。 2. 常用损失函数 •	回归问题：">
+<meta property="og:description" content="4.卷积神经网络4.卷积神经网络.pdf 总结总结概括 1. 卷积神经网络（CNN）简介 卷积神经网络是一种特殊的神经网络，其核心在于使用卷积运算替代一般的矩阵乘法运算。它的主要目标是解决计算机视觉中的图像识别问题。与人类轻松识别图像不同，机器在处理视角变换、光照条件、背景干扰和物体变形等问题时面临巨大挑战。 2. 动机与传统方法的不足 •	在CNN流行之前，图像处理依赖于提取边缘、纹理、线条等特">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://martin666.site/2025/06/10/%E7%AC%AC%E4%B8%89%E7%AB%A0/attachment:1c24a4fb-852a-40e5-998d-e718aa89b870:IMG_3820.jpg">
-<meta property="article:published_time" content="2025-06-10T09:31:42.000Z">
-<meta property="article:modified_time" content="2025-06-10T12:44:50.317Z">
+<meta property="article:published_time" content="2025-06-10T09:31:45.000Z">
+<meta property="article:modified_time" content="2025-06-11T04:09:15.041Z">
 <meta property="article:author" content="梦之泪伤">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://martin666.site/2025/06/10/%E7%AC%AC%E4%B8%89%E7%AB%A0/attachment:1c24a4fb-852a-40e5-998d-e718aa89b870:IMG_3820.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>第三章 - UIBO博客</title>
+  <title>前沿技术第四章 - UIBO博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="第三章"></span>
+            <span id="subtitle" data-typed-text="前沿技术第四章"></span>
           
         </div>
 
@@ -232,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k words
+          1.2k words
         
       </span>
     
@@ -289,148 +287,94 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">第三章</h1>
+            <h1 id="seo-header">前沿技术第四章</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="3-神经网络优化和其他"><a href="#3-神经网络优化和其他" class="headerlink" title="3.神经网络优化和其他"></a>3.神经网络优化和其他</h1><p><a href="./3.%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96%E5%92%8C%E5%85%B6%E4%BB%96.pdf">3.神经网络优化和其他.pdf</a></p>
+                <h1 id="4-卷积神经网络"><a href="#4-卷积神经网络" class="headerlink" title="4.卷积神经网络"></a>4.卷积神经网络</h1><p><a href="./4.%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">4.卷积神经网络.pdf</a></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>总结概括</strong></p>
-<p><strong>1. 常用激活函数</strong></p>
-<p><strong>•	Sigmoid缺点</strong>：</p>
-<p>◦	易导致梯度消失：在靠近0和1的两端，梯度接近0，影响参数更新。</p>
-<p>◦	初始化权重需谨慎：若初始化权重过大，会导致神经元饱和，无法更新参数。</p>
-<p><strong>•	ReLU优缺点</strong>（未详细提及，但作为对比）：</p>
-<p>◦	优点：缓解梯度消失问题。</p>
-<p>◦	缺点：可能造成神经元死亡。</p>
-<p><strong>2. 常用损失函数</strong></p>
-<p><strong>•	回归问题</strong>：</p>
-<p><strong>◦	MSE（均方误差）</strong>：</p>
-<p>▪	优点：连续光滑，方便求导。</p>
-<p>▪	缺点：易导致梯度爆炸。</p>
-<p><strong>◦	MAE（平均绝对误差）</strong>：</p>
-<p>▪	优点：梯度稳定，不易爆炸。</p>
-<p>▪	缺点：不光滑，不便求导。</p>
-<p><strong>◦	Smooth L1 Loss</strong>：</p>
-<p>▪	特点：对离群点更鲁棒，梯度变化小。</p>
-<p><strong>•	分类问题</strong>：</p>
-<p><strong>◦	0-1损失函数</strong>：</p>
-<p>▪	不考虑误差程度，仅判断是否预测正确。</p>
-<p><strong>◦	交叉熵损失函数</strong>：</p>
-<p>▪	应用广泛，描述模型与理想模型的距离。</p>
-<p><strong>◦	Softmax Loss</strong>：</p>
-<p>▪	适用于多分类问题。</p>
-<p><strong>◦	Logistic Loss</strong>：</p>
-<p>▪	用于二分类问题。</p>
-<p><strong>3. 深度模型优化方法</strong></p>
-<p><strong>•	随机梯度下降（SGD）</strong>：</p>
-<p>◦	每次使用一批数据计算梯度，避免全量数据计算的高成本。</p>
-<p>◦	优点：减少计算量，增加随机性，易于跳出局部极小点。</p>
-<p><strong>•	动量法（Momentum）</strong>：</p>
-<p>◦	增加动量帮助跳出鞍点或局部极小点。</p>
-<p>◦	参数更新基于当前梯度和历史梯度。</p>
-<p><strong>•	AdaGrad</strong>：</p>
-<p>◦	根据累积平方梯度调整学习率，平缓方向进步更大。</p>
-<p><strong>•	RMSProp</strong>：</p>
-<p>◦	改进AdaGrad，引入衰减率，避免学习率过快递减。</p>
-<p><strong>•	Adam</strong>：</p>
-<p>◦	结合RMSProp和Momentum，目前流行且高效。</p>
-<p><strong>4. 数据处理与训练技巧</strong></p>
-<p><strong>•	数据预处理</strong>：</p>
-<p><strong>◦	中心化</strong>：每个特征维度减去均值，使数据变为0均值。</p>
-<p><strong>◦	标准化</strong>：调整不同特征维度的规模，常用方法包括除以标准差或缩放到[-1, 1]。</p>
-<p><strong>•	权重初始化</strong>：</p>
-<p><strong>◦	全0初始化</strong>：不可取，导致权重失去不对称性。</p>
-<p><strong>◦	随机初始化</strong>：打破对称性，但需注意初始化范围，避免梯度过小。</p>
-<p><strong>•	批标准化（Batch Normalization）</strong>：</p>
-<p>◦	标准化过程可微，减少不合理初始化问题，加快收敛速度。</p>
-<p><strong>•	防止过拟合</strong>：</p>
-<p><strong>◦	Dropout</strong>：依概率P保留神经元，简单有效，广泛应用于深度学习。</p>
-<h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><p><strong>联结主义（神经网络）大纲</strong></p>
-<p><strong>一、常用的激活函数</strong></p>
-<p>•	Sigmoid缺点</p>
-<p>◦	造成梯度消失</p>
-<p>▪	在靠近1和0的两端时，梯度接近0</p>
-<p>▪	导致模型不收敛</p>
-<p>▪	初始化权重需非常小心，否则多数神经元会饱和</p>
-<p>•	ReLU优缺点</p>
-<p>◦	未详细列出，需补充具体优缺点内容</p>
-<p>•	其他激活函数</p>
-<p>◦	需补充具体内容</p>
-<p><strong>二、常用的损失函数</strong></p>
-<p><strong>（一）回归问题</strong></p>
-<p>1	MSE均方误差</p>
-<p>◦	定义与公式</p>
-<p>◦	优点：连续光滑，方便求导</p>
-<p>◦	缺点：可能导致梯度爆炸</p>
-<p>2	平均绝对误差（MAE）</p>
-<p>◦	定义与公式</p>
-<p>◦	优点：稳定梯度，不会导致梯度爆炸</p>
-<p>◦	缺点：在中心点不可求导</p>
-<p>3	Smooth L1 Loss</p>
-<p>◦	定义与公式</p>
-<p>◦	优点：对离群点更鲁棒，梯度变化小</p>
-<p>◦	缺点：未明确提及</p>
-<p><strong>（二）分类问题</strong></p>
-<p>1	0-1损失函数</p>
-<p>◦	定义与公式</p>
-<p>◦	特点：实际应用较少，主要用于衡量其他损失函数效果</p>
-<p>2	绝对值损失函数</p>
-<p>◦	内容未明确提及</p>
-<p>3	交叉熵损失函数</p>
-<p>◦	重要性与应用范围</p>
-<p>◦	不同标签定义下的Loss表达式</p>
-<p>4	Softmax Loss</p>
-<p>◦	多分类问题中的应用</p>
-<p>5	Logistic Loss</p>
-<p>◦	内容未明确提及</p>
-<p><strong>三、深度模型中的优化</strong></p>
-<p><strong>（一）优化目标</strong></p>
-<p>•	寻找参数θ以降低代价函数J(θ)</p>
-<p>•	包括训练集性能评估与正则化项</p>
-<p><strong>（二）优化方法</strong></p>
-<p>1	批量算法</p>
-<p>2	随机梯度下降（SGD）</p>
-<p>◦	动机与实现方式</p>
-<p>◦	小批量随机采样重要性</p>
-<p>◦	学习率选择策略</p>
-<p>3	梯度下降法变式</p>
-<p>◦	SGD特点</p>
-<p>◦	Momentum</p>
-<p>▪	核心概念与作用</p>
-<p>▪	动量计算方法</p>
-<p>◦	AdaGrad</p>
-<p>▪	算法机制与优势</p>
-<p>◦	RMSProp</p>
-<p>▪	改进点与衰减率</p>
-<p>◦	Adam</p>
-<p>▪	RMSProp+Momentum结合</p>
-<p><strong>（三）优化器选择</strong></p>
-<p>•	当前主流优化算法</p>
-<p>•	选择依据：使用者对算法熟悉程度及超参数调节能力</p>
-<p><strong>四、数据处理和训练技巧</strong></p>
-<p><strong>（一）数据预处理</strong></p>
-<p>1	中心化</p>
-<p>◦	方法：每个特征维度减去相应均值</p>
-<p>◦	应用场景：图像数据等</p>
-<p>2	标准化</p>
-<p>◦	方法：除以标准差或缩放到[-1,1]区间</p>
-<p>◦	目的：使不同特征维度处于相同规模</p>
-<p><strong>（二）权重初始化</strong></p>
-<p>1	全0初始化</p>
-<p>◦	缺点：破坏神经元独立性</p>
-<p>2	随机初始化</p>
-<p>◦	方法：高斯随机化、均匀随机化</p>
-<p>◦	注意事项：避免初始化过小导致梯度流信号减弱</p>
-<p><strong>（三）批标准化（Batch Normalization）</strong></p>
-<p>•	核心思想：将标准化过程应用于神经网络每一层</p>
-<p>•	优点：增强对不良初始化的鲁棒性，加快收敛速度</p>
-<p><strong>（四）防止过拟合</strong></p>
-<p>1	Dropout</p>
-<p>◦	核心思想：依概率P保留神经元</p>
-<p>◦	实现方式：每次训练时部分神经元被设置为0</p>
-<p><img src="/2025/06/10/%E7%AC%AC%E4%B8%89%E7%AB%A0/attachment:1c24a4fb-852a-40e5-998d-e718aa89b870:IMG_3820.jpg" srcset="/img/loading.gif" lazyload alt="IMG_3820.JPG"></p>
-<p><a target="_blank" rel="noopener" href="https://www.notion.so/3-20d925f269ce81bebc87fc20071c5eeb?pvs=21">3.神经网络优化和其他</a></p>
+<p><strong>1. 卷积神经网络（CNN）简介</strong></p>
+<p>卷积神经网络是一种特殊的神经网络，其核心在于使用卷积运算替代一般的矩阵乘法运算。它的主要目标是解决计算机视觉中的图像识别问题。与人类轻松识别图像不同，机器在处理视角变换、光照条件、背景干扰和物体变形等问题时面临巨大挑战。</p>
+<p><strong>2. 动机与传统方法的不足</strong></p>
+<p>•	在CNN流行之前，图像处理依赖于提取边缘、纹理、线条等特征的传统方法，这些方法效率低且准确率不高。</p>
+<p>•	随着机器学习的发展，尤其是数据驱动算法的应用，CNN使得某些图像集上的机器识别准确率超过了人类。</p>
+<p><strong>3. 卷积层的核心概念</strong></p>
+<p><strong>•	滤波器</strong>：由可学习的滤波器集合构成，滤波器尺寸通常较小（如5x5x3或3x3x3），深度与输入数据一致。</p>
+<p><strong>•	卷积操作</strong>：滤波器在输入数据上滑动，计算内积生成激活图，表示对特定视觉特征（如边界、颜色、轮廓）的反应。</p>
+<p><strong>•	输出结构</strong>：多个滤波器形成多张二维激活图，按深度方向堆叠构成卷积层输出。</p>
+<p><strong>•	局部连接与参数共享</strong>：</p>
+<p>◦	局部连接：利用图片特征的局部性，通过感受野提取特征。</p>
+<p>◦	参数共享：同一滤波器在不同位置共享参数，减少计算量。</p>
+<p><strong>•	空间排列</strong>：卷积层的输出深度由滤波器数量决定，滑动步长和边界填充为超参数。</p>
+<p><strong>4. 池化层的作用</strong></p>
+<p>池化层（如最大池化）通过降采样减少数据维度，保留重要特征并降低过拟合风险。</p>
+<p><strong>5. 经典CNN模型</strong></p>
+<p><strong>•	VGGNet</strong>：</p>
+<p>◦	2014年由牛津大学和Google DeepMind提出，取得ILSVRC2014比赛分类第二名和定位第一名。</p>
+<p>◦	探索了网络深度与性能的关系，成功构建16~19层深的网络，错误率显著下降，泛化性强。</p>
+<p><strong>•	其他模型</strong>：</p>
+<p>◦	Inception module：通过多尺度卷积提升性能。</p>
+<p>◦	ResNet architecture：引入残差学习解决深层网络训练问题。</p>
+<p>◦	应用场景包括图像分类、目标定位、语义分割和风格迁移等。</p>
+<p><strong>6. 总结</strong></p>
+<p>卷积神经网络通过卷积层和池化层等结构，有效解决了图像识别中的复杂问题。经典模型如VGGNet、Inception和ResNet进一步推动了深度学习在计算机视觉领域的应用和发展。</p>
+<h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><p><strong>卷积神经网络概述</strong></p>
+<p>•	动机：图像识别任务的挑战</p>
+<p>◦	人类对图片识别的轻松性与机器面临的困难对比</p>
+<p>◦	视角变换、光照条件、背景干扰和物体变形等问题的影响</p>
+<p>◦	计算机在图像识别中准确率低的原因</p>
+<p>•	数据驱动算法的核心</p>
+<p>◦	图像分类无法通过简单规则实现</p>
+<p>◦	需要通过学习算法让机器自动学习特征进行分类</p>
+<p>◦	算法依赖于数据集</p>
+<p><strong>传统方法与卷积神经网络的对比</strong></p>
+<p>•	传统图像处理方法</p>
+<p>◦	提取边缘、纹理、线条等特征</p>
+<p>◦	效率低且准确率不高</p>
+<p>•	卷积神经网络的优势</p>
+<p>◦	在某些图像集上机器识别准确率超过人类</p>
+<p>◦	卷积神经网络的作用及其重要性</p>
+<p><strong>卷积（Convolution）</strong></p>
+<p><strong>卷积层参数</strong></p>
+<p>•	滤波器集合构成卷积层参数</p>
+<p>◦	尺寸示例：5x5x3 或 3x3x3</p>
+<p>◦	宽度、高度可定义，深度需与输入一致</p>
+<p>•	前向传播过程</p>
+<p>◦	滑动滤波器计算内积生成激活图</p>
+<p>◦	激活图表示原图片对滤波器的反应</p>
+<p>•	特征学习</p>
+<p>◦	学习边界、颜色、轮廓等视觉特征</p>
+<p>◦	更高层可能学习复杂图案如蜂巢状或车轮状</p>
+<p><strong>卷积层特性</strong></p>
+<p><strong>局部连接</strong></p>
+<p>•	利用图片特征的局部性提取特征</p>
+<p>•	神经元感受野大小为滤波器宽高</p>
+<p><strong>空间排列</strong></p>
+<p>•	输出深度由滤波器数量决定</p>
+<p>•	滑动滤波器时需指定步长</p>
+<p>•	边界填充作为超参数</p>
+<p><strong>稀疏连接与参数共享</strong></p>
+<p>•	神经元仅与前一层部分神经元相关联</p>
+<p>•	参数共享减少模型复杂度</p>
+<p><strong>池化（Pooling）</strong></p>
+<p>•	最大池化层示例 (2x2 池化核, 滑动 2, 无填充)</p>
+<p>•	池化作用：降维、保留关键信息</p>
+<p><strong>CNN经典模型</strong></p>
+<p><strong>VGGNet</strong></p>
+<p>•	开发背景与成就</p>
+<p>◦	2014年提出，ILSVRC2014比赛分类项目第二名、定位项目第一名</p>
+<p>•	探索深度与性能关系</p>
+<p>◦	构建16~19层深的卷积神经网络</p>
+<p>◦	错误率下降，泛化性好</p>
+<p><strong>其他模型</strong></p>
+<p>•	Inception module</p>
+<p>•	Residual learning ResNet architecture</p>
+<p>•	Semantic segmentation</p>
+<p>•	Image classification Object localization</p>
+<p>•	Transferring style for image repainting</p>
+<p><strong>实现案例</strong></p>
+<p>•	Pytorch实现LeNet</p>
 
                 
               </div>
@@ -469,8 +413,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第三章</div>
-      <div>http://martin666.site/2025/06/10/第三章/</div>
+      <div>前沿技术第四章</div>
+      <div>http://martin666.site/2025/06/10/前沿技术第四章/</div>
     </div>
     <div class="license-meta">
       
@@ -488,7 +432,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Updated on</div>
-          <div>June 10, 2025</div>
+          <div>June 11, 2025</div>
         </div>
       
       
@@ -519,9 +463,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/10/%E7%AC%AC%E5%9B%9B%E7%AB%A0/" title="第四章">
+                      <a href="/2025/06/10/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF%E7%AC%AC%E4%BA%94%E7%AB%A0/" title="前沿技术第五章">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第四章</span>
+                        <span class="hidden-mobile">前沿技术第五章</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -529,8 +473,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/10/%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="第二章">
-                        <span class="hidden-mobile">第二章</span>
+                      <a href="/2025/06/10/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF%E7%AC%AC%E4%B8%89%E7%AB%A0/" title="前沿技术第三章">
+                        <span class="hidden-mobile">前沿技术第三章</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

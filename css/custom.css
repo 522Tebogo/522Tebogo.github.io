@@ -53,3 +53,74 @@
     color: hwb(155 13% 11%) !important;
 
 }
+.index-card {
+  padding: 15px;
+  background: #f0f0f0; /* 柔和的浅色背景，提供对比 */
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden; /* 关键：隐藏超出边界的伪元素 */
+  filter: saturate(1.1) brightness(1.05); /* 稍微增强色彩和亮度 */
+}
+
+.index-card::before,
+.index-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%; /* 宽度大于元素，以便旋转和移动后也能覆盖边框 */
+  height: 150%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 0, 0, 0.5), /* 红色，50% 透明度 */
+    rgba(0, 255, 0, 0.5), /* 绿色，50% 透明度 */
+    rgba(0, 0, 255, 0.5)  /* 蓝色，50% 透明度 */
+  );
+  border-radius: 30%; /* 椭圆形，用于更好的光线散射效果 */
+  mix-blend-mode: color-dodge; /* 颜色道奇混合模式，模拟发光效果 */
+
+  /* 动画属性：名为 prismPulse，持续 12 秒，缓入缓出，无限循环并交替播放 */
+  animation: prismPulse 12s ease-in-out infinite alternate;
+}
+
+.index-card::before {
+  transform-origin: top left; /* 旋转中心点在左上角 */
+  transform: rotate(30deg); /* 初始倾斜 */
+  filter: blur(20px); /* 初始模糊度 */
+  animation-delay: 0s; /* 立即开始 */
+}
+
+.index-card::after {
+  transform-origin: bottom right; /* 旋转中心点在右下角 */
+  transform: rotate(-30deg); /* 反向倾斜 */
+  filter: blur(10px); /* 略微不同的模糊度，增加层次感 */
+  animation-delay: 0.8s; /* 略微延迟开始，制造错开的动态感 */
+}
+
+@keyframes prismPulse {
+  0% {
+    transform: rotate(0deg) scale(1) translateX(0) translateY(0);
+    filter: blur(15px);
+    opacity: 0.7;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.05) translateX(5%) translateY(-5%);
+    filter: blur(25px);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg) scale(0.95) translateX(-5%) translateY(5%);
+    filter: blur(10px);
+    opacity: 0.6;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1) translateX(5%) translateY(5%);
+    filter: blur(30px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1) translateX(0) translateY(0);
+    filter: blur(15px);
+    opacity: 0.7;
+  }
+}

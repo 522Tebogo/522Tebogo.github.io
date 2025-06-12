@@ -1,0 +1,38 @@
+/* 整个侧边栏文本变黄 */
+.sidebar {
+  color: #e6d92b !important;
+}
+
+/* 侧边栏所有链接变黄 */
+.sidebar a {
+  color: #e6d92b !important;
+}
+
+/* 目录图标颜色变黄（使用 iconfont） */
+.sidebar .iconfont {
+  color: #e6d92b !important;
+}
+
+/* 如果还用了 .tocbot-link 的其他层级，也保证它们是黄色 */
+.sidebar .tocbot-link {
+  color: #e6d92b !important;
+}
+
+/* 如果你希望鼠标 hover 时也保持黄色（不变色） */
+.sidebar .tocbot-link:hover {
+  color: #ffffff !important;
+}
+/* 首页文章标题变黄 */
+.index-header a {
+  color: hwb(271 23% 9%) !important;
+}
+
+/* 图标也变黄 */
+.index-header .iconfont {
+  color: hwb(271 23% 9%) !important;
+}
+
+/* 如果你想鼠标悬停也仍然是黄的 */
+.index-header a:hover {
+  color: hwb(199 4% 48%) !important;
+}

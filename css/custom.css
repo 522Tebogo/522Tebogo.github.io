@@ -36,3 +36,20 @@
 .index-header a:hover {
   color: hwb(199 4% 48%) !important;
 }
+.footer-content{
+    color: hwb(0 100% 0%) !important;
+
+}
+
+.footer-content .iconfont{
+    color: hwb(0 100% 0%) !important;
+
+}
+.footer-content a{
+    color: hwb(0 100% 0%) !important;
+
+}
+.footer-content a:hover{
+    color: hwb(155 13% 11%) !important;
+
+}

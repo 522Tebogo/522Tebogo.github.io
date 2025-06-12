@@ -513,7 +513,7 @@
     Fluid.utils.loadComments('#comments', function() {
       Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
         var options = Object.assign(
-          {"envId":"https://twikoo-three-gold.vercel.app","region":"ap-shanghai","path":"window.location.pathname"},
+          {"envId":"https://twikoo-three-gold.vercel.app","region":"ap-shanghai","path":"window.location.pathname","recordIP":true},
           {
             el: '#twikoo',
             path: 'window.location.pathname',

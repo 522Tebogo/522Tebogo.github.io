@@ -23,15 +23,15 @@
   color: #ffffff !important;
 }
 /* 首页文章标题变黄 */
+/*
 .index-header a {
   color: hwb(271 23% 9%) !important;
 }
 
-/* 图标也变黄 */
 .index-header .iconfont {
   color: hwb(271 23% 9%) !important;
 }
-
+*/
 /* 如果你想鼠标悬停也仍然是黄的 */
 .index-header a:hover {
   color: hwb(199 4% 48%) !important;
@@ -82,4 +82,50 @@
 
   /* 可选：如果你希望边框上的颜色更鲜艳，可以稍微增加饱和度 */
   /* filter: saturate(1.1); */
+}
+
+/* 自定义标签云容器 */
+.tagcloud {
+  position: relative;
+  width: 100%;
+  min-height: 300px; /* 根据需要调整高度 */
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 自定义标签云链接的CSS */
+.tagcloud a {
+  position: absolute;
+  white-space: nowrap;
+  text-decoration: none;
+  /* 增加边框属性，初始颜色可以设置为透明，由JS控制 */
+  border: 1px solid transparent; /* 初始边框样式 */
+  padding: 5px 10px; /* 增加内边距，让边框有空间 */
+  border-radius: 5px; /* 轻微圆角，让边框更柔和 */
+
+  transition: color 0.4s ease-in-out, opacity 0.4s ease-in-out,
+              top 0.8s ease-out, left 0.8s ease-out,
+              transform 0.2s ease-out, border-color 0.4s ease-in-out; /* 增加border-color的过渡 */
+  animation: flash 2s infinite alternate;
+  z-index: 1;
+  color: #fff; /* 初始颜色，会被JS覆盖 */
+}
+
+/* 定义闪光动画 */
+@keyframes flash {
+  0% { opacity: 1; }
+  40% { opacity: 0.7; }
+  60% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* 鼠标悬停时的效果 */
+.tagcloud a:hover {
+  opacity: 1 !important;
+  transform: translateY(-2px) scale(1.05);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  z-index: 2;
+  /* 悬停时边框也可以变亮或有其他效果 */
+  /* border-color: rgba(255, 255, 255, 0.8) !important; */
 }

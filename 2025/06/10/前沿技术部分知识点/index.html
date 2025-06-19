@@ -887,5 +887,55 @@
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
 <script type="text/javascript" src="/js/fireworks.js"></script>
 
-<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
+<!-- hexo injector body_end start -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const passwordInput = document.getElementById('hbePass');
+
+        if (passwordInput) {
+          const inputWrapper = passwordInput.closest('.hbe-input-default');
+          const mainElement = document.getElementById('hexo-blog-encrypt');
+
+          if (inputWrapper && mainElement) {
+            if (!inputWrapper.querySelector('.hbe-verify-button')) {
+              const submitButton = document.createElement('button');
+              submitButton.textContent = '验证';
+              // Assign both the plugin's button class and our specific class
+              submitButton.className = 'hbe-button hbe-verify-button';
+              submitButton.type = 'button';
+
+              // REMOVE ALL submitButton.style.* lines here.
+              // For example, delete these (and any other style properties):
+              // submitButton.style.marginLeft = '10px';
+              // submitButton.style.padding = '8px 15px';
+              // submitButton.style.border = '1px solid rgb(204, 204, 204)';
+              // submitButton.style.borderRadius = '4px';
+              // submitButton.style.backgroundColor = 'rgb(240, 240, 240)';
+              // submitButton.style.color = 'rgb(51, 51, 51)';
+              // submitButton.style.cursor = 'pointer';
+              // submitButton.style.fontSize = '1em';
+              // submitButton.style.transition = 'background-color 0.2s, border-color 0.2s';
+              // submitButton.onmouseover = function() { this.style.backgroundColor = '#e0e0e0'; };
+              // submitButton.onmouseout = function() { this.style.backgroundColor = '#f0f0f0'; };
+
+              submitButton.addEventListener('click', function() {
+                const event = new KeyboardEvent('keydown', {
+                  key: 'Enter',
+                  keyCode: 13,
+                  which: 13,
+                  bubbles: true
+                });
+                mainElement.dispatchEvent(event);
+              });
+
+              // Adjust where the button is appended based on the .hbe-input-default structure
+              // The original .hbe-input-default is a flex container, so just appending should work.
+              // If you want it next to the input, keep it appended to inputWrapper.
+              inputWrapper.appendChild(submitButton);
+            }
+          }
+        }
+      });
+    </script>
+  <script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
 </html>

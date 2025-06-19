@@ -526,22 +526,22 @@
     
     <div class="category row nomargin-x">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="安卓福利"
-        id="heading-63980f867c25d2cf10ed7bd9eaa27049" role="tab" data-toggle="collapse" href="#collapse-63980f867c25d2cf10ed7bd9eaa27049"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="AE"
+        id="heading-ea8a1a99f6c94c275a58dcd78f418c1f" role="tab" data-toggle="collapse" href="#collapse-ea8a1a99f6c94c275a58dcd78f418c1f"
         aria-expanded="false"
       >
-        安卓福利
+        AE
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/%E5%AE%89%E5%8D%93%E7%A6%8F%E5%88%A9/" class="category-count col-2 col-md-1 col-xm-1">
+        <a href="/categories/AE/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
           <span>1</span>
         </a>
       
-      <div class="category-collapse collapse " id="collapse-63980f867c25d2cf10ed7bd9eaa27049"
-           role="tabpanel" aria-labelledby="heading-63980f867c25d2cf10ed7bd9eaa27049">
+      <div class="category-collapse collapse " id="collapse-ea8a1a99f6c94c275a58dcd78f418c1f"
+           role="tabpanel" aria-labelledby="heading-ea8a1a99f6c94c275a58dcd78f418c1f">
         
         
           
@@ -550,10 +550,10 @@
     
       
       
-        <a href="/2025/06/10/%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1/" title="临时邮箱"
+        <a href="/2025/06/13/AE-%E6%92%AD%E6%94%BE%E5%99%A8%E6%A8%A1%E6%9D%BF/" title="AE-播放器模板"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">临时邮箱</span>
+          <span class="category-post">AE-播放器模板</span>
         </a>
       
     
@@ -610,22 +610,22 @@
     
     <div class="category row nomargin-x">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="AE"
-        id="heading-ea8a1a99f6c94c275a58dcd78f418c1f" role="tab" data-toggle="collapse" href="#collapse-ea8a1a99f6c94c275a58dcd78f418c1f"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="安卓福利"
+        id="heading-63980f867c25d2cf10ed7bd9eaa27049" role="tab" data-toggle="collapse" href="#collapse-63980f867c25d2cf10ed7bd9eaa27049"
         aria-expanded="false"
       >
-        AE
+        安卓福利
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/AE/" class="category-count col-2 col-md-1 col-xm-1">
+        <a href="/categories/%E5%AE%89%E5%8D%93%E7%A6%8F%E5%88%A9/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
           <span>1</span>
         </a>
       
-      <div class="category-collapse collapse " id="collapse-ea8a1a99f6c94c275a58dcd78f418c1f"
-           role="tabpanel" aria-labelledby="heading-ea8a1a99f6c94c275a58dcd78f418c1f">
+      <div class="category-collapse collapse " id="collapse-63980f867c25d2cf10ed7bd9eaa27049"
+           role="tabpanel" aria-labelledby="heading-63980f867c25d2cf10ed7bd9eaa27049">
         
         
           
@@ -634,10 +634,10 @@
     
       
       
-        <a href="/2025/06/13/AE-%E6%92%AD%E6%94%BE%E5%99%A8%E6%A8%A1%E6%9D%BF/" title="AE-播放器模板"
+        <a href="/2025/06/10/%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1/" title="临时邮箱"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">AE-播放器模板</span>
+          <span class="category-post">临时邮箱</span>
         </a>
       
     
@@ -774,5 +774,55 @@
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
 <script type="text/javascript" src="/js/fireworks.js"></script>
 
-<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
+<!-- hexo injector body_end start -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const passwordInput = document.getElementById('hbePass');
+
+        if (passwordInput) {
+          const inputWrapper = passwordInput.closest('.hbe-input-default');
+          const mainElement = document.getElementById('hexo-blog-encrypt');
+
+          if (inputWrapper && mainElement) {
+            if (!inputWrapper.querySelector('.hbe-verify-button')) {
+              const submitButton = document.createElement('button');
+              submitButton.textContent = '验证';
+              // Assign both the plugin's button class and our specific class
+              submitButton.className = 'hbe-button hbe-verify-button';
+              submitButton.type = 'button';
+
+              // REMOVE ALL submitButton.style.* lines here.
+              // For example, delete these (and any other style properties):
+              // submitButton.style.marginLeft = '10px';
+              // submitButton.style.padding = '8px 15px';
+              // submitButton.style.border = '1px solid rgb(204, 204, 204)';
+              // submitButton.style.borderRadius = '4px';
+              // submitButton.style.backgroundColor = 'rgb(240, 240, 240)';
+              // submitButton.style.color = 'rgb(51, 51, 51)';
+              // submitButton.style.cursor = 'pointer';
+              // submitButton.style.fontSize = '1em';
+              // submitButton.style.transition = 'background-color 0.2s, border-color 0.2s';
+              // submitButton.onmouseover = function() { this.style.backgroundColor = '#e0e0e0'; };
+              // submitButton.onmouseout = function() { this.style.backgroundColor = '#f0f0f0'; };
+
+              submitButton.addEventListener('click', function() {
+                const event = new KeyboardEvent('keydown', {
+                  key: 'Enter',
+                  keyCode: 13,
+                  which: 13,
+                  bubbles: true
+                });
+                mainElement.dispatchEvent(event);
+              });
+
+              // Adjust where the button is appended based on the .hbe-input-default structure
+              // The original .hbe-input-default is a flex container, so just appending should work.
+              // If you want it next to the input, keep it appended to inputWrapper.
+              inputWrapper.appendChild(submitButton);
+            }
+          }
+        }
+      });
+    </script>
+  <script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
 </html>

@@ -131,6 +131,43 @@
 	overflow: hidden;
 }
 
+.hbe-verify-button {
+    /* Override hbe-button's default appearance */
+    background: #007bff; /* A clean blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding:  5px; /* Comfortable padding */
+    font-size: 1em; /* Adjust font size if needed, '1em' matches parent font size */
+    font-weight: 500; /* Medium font weight */
+    text-shadow: none; /* Remove text shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    cursor: pointer; /* Indicate it's clickable */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover */
+    /* Override hbe-button's positioning-related styles if they are affecting it */
+    margin-left: 295px; /* Keep consistent spacing to the left of the button */
+    width: 100px; /* Allow button to size based on content */
+    text-align: center; /* Center the text within the button */
+    text-indent: 0; /* Remove any text indentation */
+
+    /* Remove the problematic ::after pseudo-element that creates the triangle */
+    &::after {
+        display: none;
+    }
+}
+
+.hbe-verify-button:hover {
+    background: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Slightly larger shadow on hover */
+}
+
+.hbe-verify-button:active {
+    /* Remove hbe-button's active state shifts */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Smaller shadow when clicked */
+    transform: translateY(1px); /* Slight downward press effect */
+    top: auto; /* Reset top property from hbe-button:active */
+}
+
 .hbe-input-field-default {
 	width: 100%;
 	background: transparent;

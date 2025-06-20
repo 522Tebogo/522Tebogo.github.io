@@ -129,3 +129,9 @@
   /* 悬停时边框也可以变亮或有其他效果 */
   /* border-color: rgba(255, 255, 255, 0.8) !important; */
 }
+#live2d-widget {
+  right: 70px !important;   /* 距离右边 50px */
+  top: 50%;                 /* 顶部设置为 50% */
+  transform: translateY(-50%);  /* 使其垂直居中 */
+  bottom: unset !important;     /* 取消默认 bottom 定位 */
+}

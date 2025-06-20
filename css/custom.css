@@ -130,8 +130,97 @@
   /* border-color: rgba(255, 255, 255, 0.8) !important; */
 }
 #live2d-widget {
-  right: 70px !important;   /* 距离右边 50px */
+  left: 70px !important;   /* 距离右边 50px */
   top: 50%;                 /* 顶部设置为 50% */
   transform: translateY(-50%);  /* 使其垂直居中 */
   bottom: unset !important;     /* 取消默认 bottom 定位 */
+}
+/* 滚动条通用样式 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a6a6a6;
+  border-radius: 1rem;
+  min-height: 60px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #757575;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #424242;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* 暗色模式样式 */
+[data-user-color-scheme='dark'] ::-webkit-scrollbar-thumb {
+  background-color: #687582;
+}
+
+[data-user-color-scheme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background-color: #9da8b3;
+}
+
+[data-user-color-scheme='dark'] ::-webkit-scrollbar-thumb:active {
+  background-color: #c5d0db;
+}
+
+
+
+
+.category {
+  .row {
+    border-radius: 1rem;
+  }
+
+  .category-item {
+    border-radius: 1rem;
+  }
+
+  .category-post-list {
+    border-radius: 1rem;
+  }
+}
+
+
+.list-group {
+  border-radius: 1rem;
+}
+
+.list-group-item {
+  border-radius: 1rem;
+}
+
+.links .card-body {
+  border-radius: 1rem;
+}
+
+.navbar {
+  .nav-item .nav-link {
+    border-radius: 0.5rem;
+  }
+
+  .dropdown-menu {
+    border-radius: 0.5rem;
+  }
+
+  .dropdown-item {
+    border-radius: 0.25rem;
+  }
+}
+
+#board {
+  border-radius: 1rem;
+}
+
+#scroll-top-button {
+  border-radius: 0.5rem;
 }

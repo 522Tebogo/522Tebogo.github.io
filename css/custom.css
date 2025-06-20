@@ -1,3 +1,8 @@
+#uniqueImg{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
 /* 整个侧边栏文本变黄 */
 .sidebar {
   color: #e6d92b !important;

@@ -137,9 +137,9 @@
 #live2d-widget {
   left: 70px !important;   /* 距离右边 50px */
   top: 50%;                 /* 顶部设置为 50% */
-  transform: translateY(-50%);  /* 使其垂直居中 */
-  bottom: unset !important;     /* 取消默认 bottom 定位 */
+  transform: translateY(-50%);  /* 使其垂直居中 */   /* 取消默认 bottom 定位 */
 }
+
 /* 滚动条通用样式 */
 ::-webkit-scrollbar {
   width: 10px;

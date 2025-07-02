@@ -9,6 +9,7 @@
     <url>{{ [url, post.path] | urlJoin | uriencode }}</url>
     {% if content %}
     <content type="html"><![CDATA[{{ post.content | noControlChars | safe }}]]></content>
+
     {% endif %}
     {% if post.categories and post.categories.length>0 %}
     <categories>

@@ -62,7 +62,7 @@
 
 /* --- 4. 主窗口样式 --- */
 #chat-window {
-  width: 420px;
+  width: 400px;
   height: 700px;
   max-height: 85vh;
   background: var(--bg-primary);

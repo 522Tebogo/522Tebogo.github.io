@@ -1,0 +1,237 @@
+/*
+ * Gemini Chat Widget - Refined & Themed Version
+ *
+ * - Light/Dark mode support
+ * - Enhanced animations
+ * - Improved layout and details
+ */
+
+/* --- 1. 动画关键帧定义 --- */
+@keyframes slide-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes message-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- 2. 主题颜色变量 --- */
+:root {
+  /* Light Mode (Default) */
+  --bg-primary: #f0f4f9;        /* 主背景 */
+  --bg-secondary: #ffffff;      /* 次级背景，如消息气泡 */
+  --bg-input: #e3e8ee;         /* 输入框背景 */
+  --text-primary: #1f1f1f;     /* 主要文字 */
+  --text-secondary: #5f6368;   /* 次要文字 */
+  --accent-gradient: linear-gradient(135deg, #4285F4, #9b72cb, #d96570); /* 渐变色 */
+  --shadow-color: rgba(95, 100, 104, 0.2); /* 阴影颜色 */
+  --border-color: rgba(0, 0, 0, 0.1);
+  --font-family: 'Google Sans', 'Noto Sans SC', sans-serif; /* 增加了中文字体回退 */
+}
+
+.dark-mode {
+  /* Dark Mode Overrides */
+  --bg-primary: #131314;
+  --bg-secondary: #1e1f20;
+  --bg-input: #303134;
+  --text-primary: #e8eaed;
+  --text-secondary: #9aa0a6;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- 3. 全局与基础样式 --- */
+#gemini-chat-widget, #gemini-chat-widget * {
+  font-family: var(--font-family);
+  box-sizing: border-box;
+}
+
+/* --- 4. 主窗口样式 --- */
+#chat-window {
+  width: 420px;
+  height: 700px;
+  max-height: 85vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  animation: slide-in-bottom 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* 其他已有样式 */
+  position: fixed; bottom: 90px; right: 20px; z-index: 1000;
+  display: flex; flex-direction: column; overflow: hidden;
+  transition: opacity 0.3s, transform 0.3s; transform-origin: bottom right;
+}
+#chat-window.hidden {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+}
+
+/* --- 5. 头部与图标 --- */
+.chat-header {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+.chat-header h3 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--text-primary);
+  flex-grow: 1;
+}
+#gemini-header-logo {
+  width: 28px;
+  height: 28px;
+  background-image: url(/img/gemini.png); /* 您的Logo */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+#close-chat-button {
+  background: none; border: none; padding: 4px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+#close-chat-button:hover {
+  transform: scale(1.2);
+  color: var(--text-primary);
+}
+
+/* --- 6. 消息区域 --- */
+#chat-messages {
+  flex-grow: 1;
+  padding: 24px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#chat-messages::-webkit-scrollbar { width: 8px; }
+#chat-messages::-webkit-scrollbar-track { background: var(--bg-primary); }
+#chat-messages::-webkit-scrollbar-thumb { background: var(--bg-input); border-radius: 4px; }
+
+.message {
+  display: flex;
+  max-width: 90%;
+  align-items: flex-start;
+  gap: 12px;
+  animation: message-pop-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.message p {
+  padding: 12px 18px;
+  border-radius: 22px;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  word-wrap: break-word;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.bot-message { align-self: flex-start; }
+.bot-avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-image: url(/img/dog.jpg); /* 您的机器人头像 */
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--bg-primary);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+.bot-message p {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-top-left-radius: 6px;
+}
+
+.user-message { align-self: flex-end; flex-direction: row-reverse; }
+.user-message p {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  border-top-right-radius: 6px;
+}
+
+/* --- 7. 输入区域 --- */
+.chat-input-area {
+  padding: 16px 20px 24px 20px;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  flex-shrink: 0;
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--bg-input);
+  border-radius: 28px;
+  padding: 4px 8px 4px 20px;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
+}
+.input-wrapper:focus-within {
+  box-shadow: 0 0 0 2px #4285F4;
+}
+#chat-input {
+  flex-grow: 1; border: none; background: transparent;
+  padding: 12px 0; font-size: 1rem;
+  color: var(--text-primary);
+  outline: none;
+}
+#chat-input::placeholder { color: var(--text-secondary); }
+
+#send-button {
+  background: none; border: none; border-radius: 50%;
+  width: 44px; height: 44px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+#send-button:hover {
+  color: #4285F4;
+  transform: scale(1.1);
+}
+
+/* --- 8. 悬浮按钮 --- */
+#chat-toggle-button {
+  background: var(--accent-gradient); color: white; border: none;
+  border-radius: 50%; width: 60px; height: 60px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); cursor: pointer;
+  display: flex; justify-content: center; align-items: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: fixed; bottom: 20px; right: 20px; z-index: 999;
+}
+#chat-toggle-button:hover { transform: scale(1.15) rotate(15deg); }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* --- 新增的“思考中”动画样式 --- */
+/* 当 bot-avatar 元素拥有 thinking class 时，应用 spin 动画 */
+.bot-avatar.thinking {
+  animation: spin 1s linear infinite; /* 1秒转一圈，线性，无限循环 */
+}

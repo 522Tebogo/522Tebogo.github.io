@@ -2,6 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="en,default" data-default-color-scheme=auto>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
 
 
 
@@ -68,6 +76,7 @@
 <link rel="stylesheet" href="/css/indeximg-hover.css">
 <link rel="stylesheet" href="/css/glassbg.css">
 <link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/gemini-chat.css">
 
 
 
@@ -98,7 +107,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+</head>
 
 
 <body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
@@ -231,7 +240,7 @@
                 
 
 <div class="list-group">
-  <p class="h4">29 posts in total</p>
+  <p class="h4">6 posts in total</p>
   <hr>
   
   
@@ -257,36 +266,6 @@
     </a>
   
     
-    <a href="/2025/06/22/%E4%BA%91%E8%AE%A1%E7%AE%97%E9%97%AE%E9%A2%98%EF%BC%8B%E7%AD%94%E6%A1%88/" class="list-group-item list-group-item-action">
-      <time>06-22</time>
-      <div class="list-group-item-title">云计算问题＋答案</div>
-    </a>
-  
-    
-    <a href="/2025/06/15/%E8%BD%AF%E5%B7%A5%E6%A6%82%E8%AE%BA%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88/" class="list-group-item list-group-item-action">
-      <time>06-15</time>
-      <div class="list-group-item-title">软工概论习题答案</div>
-    </a>
-  
-    
-    <a href="/2025/06/15/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%AE%BA%E6%80%BB%E7%BB%93%E4%B8%8E%E5%A4%8D%E4%B9%A0II/" class="list-group-item list-group-item-action">
-      <time>06-15</time>
-      <div class="list-group-item-title">软件工程概论总结与复习II</div>
-    </a>
-  
-    
-    <a href="/2025/06/15/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%AE%BA%E8%AF%95%E5%8D%B7II/" class="list-group-item list-group-item-action">
-      <time>06-15</time>
-      <div class="list-group-item-title">软件工程概论试卷II</div>
-    </a>
-  
-    
-    <a href="/2025/06/15/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%AE%BA%E8%AF%95%E5%8D%B7I/" class="list-group-item list-group-item-action">
-      <time>06-15</time>
-      <div class="list-group-item-title">软件工程概论试卷I</div>
-    </a>
-  
-    
     <a href="/2025/06/15/cloudflare-%E9%83%A8%E7%BD%B2workers%E8%8E%B7%E5%8F%96%E9%AB%98%E9%80%9F%E4%B8%8A%E7%BD%91%E8%8A%82%E7%82%B9/" class="list-group-item list-group-item-action">
       <time>06-15</time>
       <div class="list-group-item-title">cloudflare 部署workers获取高速上网节点</div>
@@ -298,14 +277,14 @@
       <div class="list-group-item-title">AE-播放器模板</div>
     </a>
   
+    
+    <a href="/2025/06/10/%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1/" class="list-group-item list-group-item-action">
+      <time>06-10</time>
+      <div class="list-group-item-title">临时邮箱</div>
+    </a>
+  
 </div>
 
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/#board">2</a><a class="page-number" href="/archives/page/3/#board">3</a><a class="extend next" rel="next" href="/archives/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
-    </span>
-  </nav>
 
 
 
@@ -419,6 +398,7 @@
 <script src="/js/fireworks.js"></script>
 <script src="/js/flash.js"></script>
 <script src="/js/yinghua.js"></script>
+<script src="/js/gemini-chat.js"></script>
 
 
 
@@ -428,6 +408,36 @@
 
 
   
+
+  <div id="gemini-chat-widget">
+    <button id="chat-toggle-button" aria-label="Toggle Chat">
+        <span class="material-symbols-outlined">chat</span>
+    </button>
+
+<div id="chat-window" class="hidden" style="display: none;">
+        <div class="chat-header">
+<div id="gemini-header-logo"></div>
+            <h3>UIBO-Gemini-1.5-Flash</h3>
+            <button id="close-chat-button" aria-label="Close Chat">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div id="chat-messages">
+            <div class="message bot-message">
+                <div class="bot-avatar"></div>
+                <p>Hello！I'm UIBO-Gemini-1.5-Flash，What can i do for you？</p>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <div class="input-wrapper">
+                <input type="text" id="chat-input" placeholder="Ask Gemini" autocomplete="off">
+                <button id="send-button" aria-label="Send Message">
+                    <span class="material-symbols-outlined" style="margin-right: 20px;">send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
   <noscript>

@@ -2,6 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="en,default" data-default-color-scheme=auto>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
 
 
 
@@ -81,6 +89,7 @@
 <link rel="stylesheet" href="/css/indeximg-hover.css">
 <link rel="stylesheet" href="/css/glassbg.css">
 <link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/gemini-chat.css">
 
 
 
@@ -111,7 +120,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+</head>
 
 
 <body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
@@ -410,21 +419,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/11/%E4%BA%91%E8%AE%A1%E7%AE%97%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/" title="云计算问题集合">
+                      <a href="/2025/06/13/AE-%E6%92%AD%E6%94%BE%E5%99%A8%E6%A8%A1%E6%9D%BF/" title="AE-播放器模板">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">云计算问题集合</span>
+                        <span class="hidden-mobile">AE-播放器模板</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2025/06/10/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF%E4%B9%A0%E9%A2%98%E4%BA%8C/" title="前沿技术习题二">
-                        <span class="hidden-mobile">前沿技术习题二</span>
-                        <span class="visible-mobile">Next</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
@@ -717,6 +720,7 @@
 <script src="/js/fireworks.js"></script>
 <script src="/js/flash.js"></script>
 <script src="/js/yinghua.js"></script>
+<script src="/js/gemini-chat.js"></script>
 
 
 
@@ -726,6 +730,36 @@
 
 
   
+
+  <div id="gemini-chat-widget">
+    <button id="chat-toggle-button" aria-label="Toggle Chat">
+        <span class="material-symbols-outlined">chat</span>
+    </button>
+
+<div id="chat-window" class="hidden" style="display: none;">
+        <div class="chat-header">
+<div id="gemini-header-logo"></div>
+            <h3>UIBO-Gemini-1.5-Flash</h3>
+            <button id="close-chat-button" aria-label="Close Chat">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div id="chat-messages">
+            <div class="message bot-message">
+                <div class="bot-avatar"></div>
+                <p>Hello！I'm UIBO-Gemini-1.5-Flash，What can i do for you？</p>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <div class="input-wrapper">
+                <input type="text" id="chat-input" placeholder="Ask Gemini" autocomplete="off">
+                <button id="send-button" aria-label="Send Message">
+                    <span class="material-symbols-outlined" style="margin-right: 20px;">send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
   <noscript>

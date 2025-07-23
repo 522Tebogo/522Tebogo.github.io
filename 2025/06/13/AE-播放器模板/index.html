@@ -2,6 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="en,default" data-default-color-scheme=auto>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
 
 
 
@@ -82,6 +90,7 @@
 <link rel="stylesheet" href="/css/indeximg-hover.css">
 <link rel="stylesheet" href="/css/glassbg.css">
 <link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/gemini-chat.css">
 
 
 
@@ -112,7 +121,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+</head>
 
 
 <body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
@@ -428,8 +437,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/11/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%AE%BA%E6%80%BB%E7%BB%93%E4%B8%8E%E5%A4%8D%E4%B9%A0/" title="软件工程概论总结与复习">
-                        <span class="hidden-mobile">软件工程概论总结与复习</span>
+                      <a href="/2025/06/10/%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1/" title="临时邮箱">
+                        <span class="hidden-mobile">临时邮箱</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -725,6 +734,7 @@
 <script src="/js/fireworks.js"></script>
 <script src="/js/flash.js"></script>
 <script src="/js/yinghua.js"></script>
+<script src="/js/gemini-chat.js"></script>
 
 
 
@@ -734,6 +744,36 @@
 
 
   
+
+  <div id="gemini-chat-widget">
+    <button id="chat-toggle-button" aria-label="Toggle Chat">
+        <span class="material-symbols-outlined">chat</span>
+    </button>
+
+<div id="chat-window" class="hidden" style="display: none;">
+        <div class="chat-header">
+<div id="gemini-header-logo"></div>
+            <h3>UIBO-Gemini-1.5-Flash</h3>
+            <button id="close-chat-button" aria-label="Close Chat">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div id="chat-messages">
+            <div class="message bot-message">
+                <div class="bot-avatar"></div>
+                <p>Hello！I'm UIBO-Gemini-1.5-Flash，What can i do for you？</p>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <div class="input-wrapper">
+                <input type="text" id="chat-input" placeholder="Ask Gemini" autocomplete="off">
+                <button id="send-button" aria-label="Send Message">
+                    <span class="material-symbols-outlined" style="margin-right: 20px;">send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
   <noscript>

@@ -6,7 +6,6 @@
  * - Improved layout and details
  */
 
-/* --- 1. 动画关键帧定义 --- */
 @keyframes slide-in-bottom {
   from {
     opacity: 0;
@@ -21,12 +20,17 @@
 @keyframes message-pop-in {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: translateY(10px) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0) scale(1);
   }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* --- 2. 主题颜色变量 --- */
@@ -176,7 +180,7 @@
 .chat-input-area {
   padding: 16px 20px 24px 20px;
   border-top: 1px solid var(--border-color);
-  background: var(--bg-primary);
+  background: transparent; /* 与主背景融合 */
   flex-shrink: 0;
 }
 .input-wrapper {
@@ -185,11 +189,12 @@
   background: var(--bg-input);
   border-radius: 28px;
   padding: 4px 8px 4px 20px;
-  transition: box-shadow 0.2s;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
+  transition: box-shadow 0.2s ease-in-out; /* 增加过渡动画 */
+  border: 1px solid transparent;
 }
 .input-wrapper:focus-within {
-  box-shadow: 0 0 0 2px #4285F4;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.4); /* 柔和的发光效果 */
+  border-color: #4285F4;
 }
 #chat-input {
   flex-grow: 1; border: none; background: transparent;
@@ -222,6 +227,82 @@
 }
 #chat-toggle-button:hover { transform: scale(1.15) rotate(15deg); }
 
+/*
+ * ===================================================================
+ * 响应式设计：移动端适配 (当屏幕宽度 <= 768px 时生效)
+ * ===================================================================
+ */
+@media (max-width: 768px) {
+
+  /* 1. 聊天窗口：让它像一个从底部弹出的全屏应用 */
+  #chat-window {
+    /* 宽度占满整个屏幕，左右留出一点边距 */
+    width: 100vw; 
+    left: 0;
+    right: 0;
+    
+    /* 高度占满大部分屏幕 */
+    height: 100%;
+    max-height: 100vh; /* 覆盖掉电脑端的 max-height */
+    
+    bottom: 0; /* 完全贴底 */
+    border-radius: 20px 20px 0 0; /* 只有顶部是圆角，看起来像从底部滑出的面板 */
+    border: none; /* 在小屏幕上可以移除边框，更简洁 */
+
+    /* 动画效果从底部中心滑出 */
+    transform-origin: bottom center;
+    /* 确保 transition 生效 */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s;
+  }
+
+  /* 2. 隐藏时的状态：从屏幕正下方滑出 */
+  #chat-window.hidden {
+    /* 使用 Y 轴位移，让它完全滑到屏幕下方 */
+    transform: translateY(100%);
+    opacity: 1; /* 透明度可以保持，主要靠 transform 隐藏 */
+  }
+
+  /* 3. 悬浮按钮：调整大小和位置，使其更适合手机操作 */
+  #chat-toggle-button {
+    width: 56px;
+    height: 56px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  /* 4. 细节微调：减小间距和字体，让小屏幕不拥挤 */
+  #chat-messages {
+    padding: 16px;
+    gap: 16px;
+  }
+  .message p {
+    font-size: 0.9rem; /* 略微减小字体 */
+    padding: 8px 14px;
+  }
+  .bot-avatar {
+    width: 30px;
+    height: 30px;
+  }
+#gemini-header-logo {
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+
+/* 内层 div：专门负责显示图片 */
+#gemini-header-logo .avatar-image {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/gemini.png); /* 您的 Logo 图片 */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+  .chat-header {
+    padding-top: 20px; /* 适配手机顶部安全区域 */
+  }
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -230,8 +311,39 @@
     transform: rotate(360deg);
   }
 }
-/* --- 新增的“思考中”动画样式 --- */
-/* 当 bot-avatar 元素拥有 thinking class 时，应用 spin 动画 */
-.bot-avatar.thinking {
-  animation: spin 1s linear infinite; /* 1秒转一圈，线性，无限循环 */
+/* --- 全新的 Gemini 风格“思考中”动画 --- */
+
+.bot-avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* 内层 div：专门负责显示图片和边框 */
+.bot-avatar .avatar-image {
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/avatar.gif); /* 您的机器人头像 */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary); /* 边框加在这里 */
+}
+
+
+/* --- 3. “思考中”的旋转光环样式 --- */
+/* 这个样式会作用于外层容器的伪元素，而内层的图片 div 不会受影响 */
+.bot-avatar.thinking::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -3px; left: -3px; right: -3px; bottom: -3px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 90deg, #036d1e, #9b72cb, #d96570, #f2994a, #4285F4
+  );
+  animation: spin 1.5s linear infinite;
 }

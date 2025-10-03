@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ----------------- CONFIGURATION ----------------- //
     //  把这里替换成你在第三步中获得的 Cloudflare Worker URL
-    const WORKER_URL = 'https://gemini-flash.l3280359024.workers.dev/'; 
+    const WORKER_URL = 'https://gemini-flash.l328059024.workers.dev/'; 
     // ----------------------------------------------- //
 
     const chatWindow = document.getElementById('chat-window');

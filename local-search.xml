@@ -4,6 +4,36 @@
   
   
   <entry>
+    <title>Cursor接入Ollama本地大模型，免费用户也可畅用Cursor</title>
+    <link href="/OllamaInCursor/"/>
+    <url>/OllamaInCursor/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><style>  #where{  color:red  }  </style><h1 id="如题，本次教程使用Cursor调用Ollama部署的本地大模型，让免费用户也能无限使用Agent"><a href="#如题，本次教程使用Cursor调用Ollama部署的本地大模型，让免费用户也能无限使用Agent" class="headerlink" title="如题，本次教程使用Cursor调用Ollama部署的本地大模型，让免费用户也能无限使用Agent"></a>如题，本次教程使用Cursor调用Ollama部署的本地大模型，让免费用户也能无限使用Agent</h1><h2 id="1-点击下载Ollama"><a href="#1-点击下载Ollama" class="headerlink" title="1.点击下载Ollama"></a><a href="https://ollama.com/">1.点击下载Ollama</a></h2><img src="/OllamaInCursor/%E4%B8%8B%E8%BD%BDollama.png" class><h2 id="2-打开Ollama，查看模型"><a href="#2-打开Ollama，查看模型" class="headerlink" title="2.打开Ollama，查看模型"></a>2.打开Ollama，查看模型</h2><img src="/OllamaInCursor/%E6%9F%A5%E7%9C%8B%E6%A8%A1%E5%9E%8B.png" class><br><p><strong><div id="where">根据自己的电脑配置下载所需要的模型，可以去Hugging Face找，这里我就以自带的gpt-oss:120b-cloud做演示</div></strong></p><h2 id="3-注册ngrok，获取token"><a href="#3-注册ngrok，获取token" class="headerlink" title="3.注册ngrok，获取token"></a>3.注册ngrok，获取token<br></h2><p><strong>注册过程不会的自行Google</strong><br><br><strong>进入下面页面获取验证token，点击copy</strong><br></p><img src="/OllamaInCursor/ngrok%E5%AF%86%E9%92%A5.png" class><h2 id="4-打开cmd，输入下列代码："><a href="#4-打开cmd，输入下列代码：" class="headerlink" title="4.打开cmd，输入下列代码："></a>4.打开cmd，输入下列代码：</h2><p><strong>ngrok config add-authtoken 这段文字替换为刚刚复制的token</strong><br><br></p><p>ps.若提示错误，则用&lt;&gt;将token部分包裹起来重新输入</p><h2 id="5-检查Ollama是否运行"><a href="#5-检查Ollama是否运行" class="headerlink" title="5.检查Ollama是否运行"></a>5.检查Ollama是否运行</h2><p><strong>浏览器访问localhost:11434，出现该页面则证明Ollama已经启动， 若没有，则将Ollama打开即可</strong></p><img src="/OllamaInCursor/ollama%E8%BF%90%E8%A1%8C.png" class><h2 id="6-进行内网穿透"><a href="#6-进行内网穿透" class="headerlink" title="6.进行内网穿透"></a>6.进行内网穿透</h2><p><strong>重新打开一个cmd，输入ngrok http 11434 –host-header&#x3D;”localhost:11434”</strong><br><strong>耐心等待一会儿，若cmd出现下列画面，则证明内网穿透已经成功</strong></p><img src="/OllamaInCursor/%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F.png" class><p><strong><div style="color:red">复制Forwarding处以.app结尾的链接</div></strong><br></p><h2 id="7-点击申请OpenAI-Key"><a href="#7-点击申请OpenAI-Key" class="headerlink" title="7.点击申请OpenAI Key"></a><a href="https://platform.openai.com/api-keys">7.点击申请OpenAI Key</a></h2><p><strong>密钥只会在创建的时候显示，过后将无法进行二次查看，建议将密钥存在一个本地文档中</strong></p><img src="/OllamaInCursor/%E8%8E%B7%E5%8F%96%E5%AF%86%E9%92%A5.png" class><h2 id="8-打开cursor，进入设置"><a href="#8-打开cursor，进入设置" class="headerlink" title="8.打开cursor，进入设置"></a>8.打开cursor，进入设置</h2><img src="/OllamaInCursor/%E6%9B%BF%E6%8D%A2%E5%AF%86%E9%92%A5.png" class><p><br><br><br><strong>将图中箭头所指的两处进行激活（打开右侧按钮），第一行输入刚刚获取的OpenAI Key，第二行输入第6步得到的链接，并在后面加上<span style="color:red">“&#x2F;v1”</span></strong></p><h2 id="9-添加模型"><a href="#9-添加模型" class="headerlink" title="9.添加模型"></a>9.添加模型</h2><p><strong>添加Ollama中的模型，参考第2步的查看模型，在添加模型时，输入模型的全名，如:gpt-oss:120b-cloud,必需是全名，输入完成后点击add，在上方进行启用即可。</strong></p><img src="/OllamaInCursor/%E6%B7%BB%E5%8A%A0%E6%A8%A1%E5%9E%8B.png" class><h2 id="10-测试效果"><a href="#10-测试效果" class="headerlink" title="10.测试效果"></a>10.测试效果</h2><p><strong>能够正常使用，说明已经成功将ollama模型接入Cursor</strong></p><img src="/OllamaInCursor/%E6%95%88%E6%9E%9C.png" class><br><br><h3 id="PS-注意事项"><a href="#PS-注意事项" class="headerlink" title="PS.注意事项"></a><div style="color:#1aa38d">PS.注意事项</div></h3><p><strong><div style="color:blue">1.没有token额度限制，免费用户也可以无限使用<br>2.注意，第六步内网穿透成功过后，不要关闭cmd窗口，因为内网穿透本质上是给本地网络映射一个临时的公网地址，所以一旦关闭，就需要重新进行穿透操作，每一次的url也都是不一样的，所以每次关闭cmd或者电脑重启后，都需要再次进行内网穿透操作，将新的url复制到第8步中的箭头所指第二行进行替换。</div></strong></p>]]></content>
+
+    
+    
+    <categories>
+      
+      <category>AI</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Cursor</tag>
+      
+      <tag>Ollama</tag>
+      
+      <tag>AI</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>夸克网盘限速优化</title>
     <link href="/Quark-Speed/"/>
     <url>/Quark-Speed/</url>
